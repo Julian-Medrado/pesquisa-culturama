@@ -25,20 +25,27 @@
                     <label for="name">Nome</label>
                     <input id="name" type="text" name="userName" required>
                     <br>
+
                     <label for="age">Idade</label>
                     <input id="age" type="number" name="userAge" min="12" max="100" required>
                     <br>
+
                     <label for="birthDate">Data de Nascimento</label>
                     <input id="birthDate" type="date" name="userBirthDate">
                     <br>
+
                     <label for="email">Email</label>
                     <input id="email" type="email" name="userEmail" required>
                     <br>
-                    <label for="phone">Tel. de Contato</label>
-                    <input id="phone" type="" name="userPhone" pattern="[0-9]{11}" placeholder="11123456789">
+
+                    <label for="phoneNumber">Tel. de Contato</label>
+                    <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="DDD + número sem espaços ou hifen" aria-describedby="phoneHelp">
+                    <small id="phoneHelp">Preencha com 11 digitos no formato: DDD + número sem espaços ou hifen</small>
+
                     <br>
                     <label for="image">upload Imagem</label>
-                    <input type="file" id="image" name="userImage" accept="image/*">
+                    <input type="file" id="image" name="userImage" accept="image/*" aria-describedby="imageHelp">
+                    <small>Envie uma foto no formato PNG ou JPEG</small>
                     <br>
                 </fieldset> 
                 
@@ -168,8 +175,8 @@
                     <label for="getResult">Desejo receber o resultado via email</label><br>
                 </fieldset>
 
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
+                <button type="submit" aria-label="Enviar dados do Formulário">Enviar</button>
+                <button type="reset" aria-label="Limpar dados do Formulário">Limpar</button>
 
             </form>
         </section>
